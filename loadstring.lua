@@ -1,0 +1,21 @@
+-- Interface visual: "Finding an old server, pls wait..."
+local gui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+gui.Name = "ServerFinderUI"
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0.4, 0, 0.15, 0)
+frame.Position = UDim2.new(0.3, 0, 0.4, 0)
+frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+frame.BorderSizePixel = 0
+
+local label = Instance.new("TextLabel", frame)
+label.Size = UDim2.new(1, 0, 1, 0)
+label.Text = "Finding an old server, pls wait..."
+label.TextColor3 = Color3.fromRGB(255, 255, 255)
+label.BackgroundTransparency = 1
+label.TextScaled = true
+label.Font = Enum.Font.GothamBold
+
+task.delay(5, function()
+    gui:Destroy()
+end)
